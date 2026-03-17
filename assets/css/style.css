@@ -1,0 +1,74 @@
+.hero-section {
+    background-color: #1a1a1a; 
+    background-image: url('chalkboard-texture.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 100px 5%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.mini-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+.btn-purchase {
+    display: inline-block;
+    background-color: #d4af37; 
+    color: black;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-purchase:hover {
+    background-color: #b8962d;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
