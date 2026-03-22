@@ -1,22 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piquant</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <section class="hero-section">
-    <div class="container">
-        <div class="hero-content">
-            <img src="" alt="Meat Menu" class="mini-logo">
-            <h1>PIQUANT GRILL</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            <a href="#" class="btn-purchase">PURCHASE</a>
-        </div>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Josefin+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="topbar__left">
+            <span class="topbar__label">FOLLOW US</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+        <div class="topbar__right">
+            <span class="topbar__phone"><i class="fas fa-phone"></i> RESERVATIONS + 1-444-123-459</span>
+            <a href="#" class="topbar__book"><i class="far fa-calendar-alt"></i> BOOK NOW</a>
+            <button class="topbar__hamburger"><i class="fas fa-bars"></i></button>
+        </div>
     </div>
-</section>
+
+    <nav class="navbar">
+        <a href="#" class="navbar__logo">Piquant</a>
+
+        <ul class="navbar__menu">
+
+            <li class="navbar__item has-dropdown">
+                <a href="#" class="navbar__link">Home</a>
+                <span class="navbar__star">&#9733;</span>
+                <ul class="dropdown">
+                    <li><a href="#"><i class="fas fa-play"></i> Original</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Health Food</a></li>
+                    <li class="has-badge"><a href="#"><i class="fas fa-play"></i> Bar &amp; Cafe <span
+                                class="badge-star">&#9733;</span></a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Restaurant</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> BBQ Home</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Fullscreen</a></li>
+                </ul>
+            </li>
+
+            <li class="navbar__item has-dropdown">
+                <a href="#" class="navbar__link">Reservations</a>
+                <span class="navbar__star">&#9733;</span>
+                <ul class="dropdown">
+                    <li><a href="#"><i class="fas fa-play"></i> Contact Form</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Open Table</a></li>
+                </ul>
+            </li>
+
+            <!-- MENU -->
+            <li class="navbar__item has-dropdown">
+                <a href="#" class="navbar__link">Menu</a>
+                <span class="navbar__star">&#9733;</span>
+                <ul class="dropdown">
+                    <li><a href="#"><i class="fas fa-play"></i> Standard List</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Menu Gallery</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Gallery &amp; List Combo</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> List With Image</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Single Menu Item</a></li>
+                </ul>
+            </li>
+
+            <!-- PAGES – mega menu -->
+            <li class="navbar__item has-mega">
+                <a href="#" class="navbar__link">Pages</a>
+                <span class="navbar__star">&#9733;</span>
+                <div class="mega">
+                    <div class="mega__col">
+                        <h4>ABOUT PAGES</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-play"></i> About Us</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Our Story</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Our Services</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> What We Offer</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega__col">
+                        <h4>INFO PAGES</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-play"></i> Meet The Chefs</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Food Gallery</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Contact Page</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Contact Page 2</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega__col">
+                        <h4>TITLE EXAMPLES</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-play"></i> System Title</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Classic Title</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Overlapping Title</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Graphic Title</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Parallax Title</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega__col mega__col--image">
+                        <h4>TODAY'S SPECIALTY</h4>
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300&q=80"
+                            alt="Today's Specialty" />
+                        <a href="#"><i class="fas fa-play"></i> See The Recipe</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- BLOG -->
+            <li class="navbar__item has-dropdown">
+                <a href="#" class="navbar__link">Blog</a>
+                <span class="navbar__star">&#9733;</span>
+                <ul class="dropdown">
+                    <li><a href="#"><i class="fas fa-play"></i> Latest News</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Post Types</a></li>
+                </ul>
+            </li>
+
+            <!-- SHOP -->
+            <li class="navbar__item has-dropdown">
+                <a href="#" class="navbar__link">Shop</a>
+                <span class="navbar__star">&#9733;</span>
+                <ul class="dropdown">
+                    <li><a href="#"><i class="fas fa-play"></i> Shop With Sidebar</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Three Columns</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Four Columns</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Four Columns Full Width</a></li>
+                    <li><a href="#"><i class="fas fa-play"></i> Single Product</a></li>
+                </ul>
+            </li>
+
+            <!-- ELEMENTS – mega menu -->
+            <li class="navbar__item has-mega">
+                <a href="#" class="navbar__link">Elements</a>
+                <div class="mega mega--wide">
+                    <div class="mega__col">
+                        <h4>TYPOGRAPHY &amp; ICONS</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-play"></i> Headings</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Columns</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Blockquotes</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Custom Fonts</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Lists</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Separators</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Icon</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega__col">
+                        <h4>CLASSIC ELEMENTS</h4>
+                        <ul>
+                            <li class="has-badge"><a href="#"><i class="fas fa-play"></i> Tabbed Gallery <span
+                                        class="badge-star">&#9733;</span></a></li>
+                            <li class="has-badge"><a href="#"><i class="fas fa-play"></i> Restaurant Menu <span
+                                        class="badge-star">&#9733;</span></a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Client Logo Carousel</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Blog Posts</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Testimonials</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Team</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Google Maps</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega__col">
+                        <h4>UI ELEMENTS</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-play"></i> Interface Colors</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Buttons</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Accordions</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Tabs</a></li>
+                            <li class="has-badge"><a href="#"><i class="fas fa-play"></i> Forms <span
+                                        class="badge-star">&#9733;</span></a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Call To Action</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega__col">
+                        <h4>GRAPHIC ELEMENTS</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-play"></i> Working Hours</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Interactive Banners</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Pricing Tables</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Counters</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Skill Bars</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Pie Charts</a></li>
+                            <li><a href="#"><i class="fas fa-play"></i> Process</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+        <!-- RIGHT: Search + Cart -->
+        <div class="navbar__right">
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <a href="#" class="cart">
+                Cart <i class="fas fa-shopping-cart"></i><span class="cart__count">0</span>
+            </a>
+        </div>
+    </nav>
 </body>
+
 </html>
