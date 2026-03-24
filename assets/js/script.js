@@ -5,7 +5,6 @@ window.onload = function() {
   var current = 0;
 
   function showSlide(n) {
-    // Hide all
     for (var i = 0; i < slides.length; i++) {
       slides[i].classList.remove('active');
     }
@@ -58,8 +57,6 @@ window.onload = function() {
     };
   }
 
-
-
   var track = document.getElementById('chefTrack');
   var cards = track.querySelectorAll('.chef-card');
   var pos = 0;
@@ -83,8 +80,6 @@ window.onload = function() {
     }
     track.style.transform = 'translateX(-' + (pos * 33.33) + '%)';
   };
-
-
 
   var testSlides = document.querySelectorAll('.test-slide');
   var testCurrent = 0;
