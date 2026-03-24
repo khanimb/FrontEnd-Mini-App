@@ -1,280 +1,151 @@
-/*
-=======================================================
-  PIQUANT RESTAURANT — assets/js/script.js
-=======================================================
-  Sections handled:
-  1. Hero Slider          — 3 slides, auto + manual
-  2. Gallery Filter       — show/hide by category
-  3. Chef Carousel        — drag/slide 3 cards at a time
-  4. Testimonials Slider  — 3 reviews auto + manual
-  5. Navbar Scroll        — sticky shadow + active state
-  6. Back to Top          — show/hide + smooth scroll
-  7. Navbar Slide BG      — set bg-image from data attr
-  8. Mobile Menu Toggle   — show/hide nav-menu
-=======================================================
-*/
+window.onload = function() {
 
-document.addEventListener('DOMContentLoaded', function () {
+  var slides = document.querySelectorAll('.slide');
+  var counter = document.getElementById('slideCounter');
+  var current = 0;
 
-  /* ══════════════════════════════════════
-     1. HERO SLIDER
-  ══════════════════════════════════════ */
-  const slides       = document.querySelectorAll('.slide');
-  const prevBtn      = document.getElementById('heroPrev');
-  const nextBtn      = document.getElementById('heroNext');
-  const counterEl    = document.getElementById('slideCounter');
-  let   currentSlide = 0;
-  let   autoSlideTimer;
-
-  /* Set background images from data-bg attribute */
-  slides.forEach(function (slide) {
-    var bg = slide.getAttribute('data-bg');
-    if (bg) slide.style.backgroundImage = 'url(' + bg + ')';
-  });
-
-  function goToSlide(index) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (index + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-    var next = (currentSlide + 1) % slides.length;
-    if (counterEl) counterEl.textContent = 'Next ' + (next + 1) + '/' + slides.length + ' >';
+  function showSlide(n) {
+    // Hide all
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.remove('active');
+    }
+    if (n >= slides.length) n = 0;
+    if (n < 0) n = slides.length - 1;
+    current = n;
+    slides[current].classList.add('active');
+    var nextNum = current + 2;
+    if (nextNum > slides.length) nextNum = 1;
+    counter.textContent = 'Next ' + nextNum + '/' + slides.length + ' >';
   }
 
-  function nextSlide() { goToSlide(currentSlide + 1); }
-  function prevSlide() { goToSlide(currentSlide - 1); }
+  document.getElementById('nextBtn').onclick = function() {
+    showSlide(current + 1);
+  };
 
-  function startAuto() {
-    clearInterval(autoSlideTimer);
-    autoSlideTimer = setInterval(nextSlide, 5000);
-  }
+  document.getElementById('prevBtn').onclick = function() {
+    showSlide(current - 1);
+  };
 
-  if (prevBtn) prevBtn.addEventListener('click', function () { prevSlide(); startAuto(); });
-  if (nextBtn) nextBtn.addEventListener('click', function () { nextSlide(); startAuto(); });
-  if (counterEl) counterEl.addEventListener('click', function () { nextSlide(); startAuto(); });
+  counter.onclick = function() {
+    showSlide(current + 1);
+  };
 
-  startAuto();
+  setInterval(function() {
+    showSlide(current + 1);
+  }, 5000);
 
-  /* ══════════════════════════════════════
-     2. GALLERY FILTER
-  ══════════════════════════════════════ */
-  var filterBtns = document.querySelectorAll('.gf-btn');
-  var galleryItems = document.querySelectorAll('.gallery-item');
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var galItems = document.querySelectorAll('.gal-img');
 
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      filterBtns.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
+  for (var i = 0; i < filterBtns.length; i++) {
+    filterBtns[i].onclick = function() {
 
-      var filter = btn.getAttribute('data-filter');
+      for (var j = 0; j < filterBtns.length; j++) {
+        filterBtns[j].classList.remove('active');
+      }
+      this.classList.add('active');
 
-      galleryItems.forEach(function (item) {
-        if (filter === 'all') {
-          item.classList.remove('hidden');
+      var filter = this.getAttribute('data-filter');
+
+      for (var k = 0; k < galItems.length; k++) {
+        var cat = galItems[k].getAttribute('data-cat');
+        if (filter === 'all' || cat === filter || cat === 'all') {
+          galItems[k].classList.remove('hidden');
         } else {
-          var cat = item.getAttribute('data-cat');
-          if (cat === filter || cat === 'all') {
-            item.classList.remove('hidden');
-          } else {
-            item.classList.add('hidden');
-          }
+          galItems[k].classList.add('hidden');
         }
-      });
-    });
-  });
-
-  /* ══════════════════════════════════════
-     3. CHEF CAROUSEL
-  ══════════════════════════════════════ */
-  var chefTrack   = document.getElementById('chefTrack');
-  var chefPrevBtn = document.getElementById('chefPrev');
-  var chefNextBtn = document.getElementById('chefNext');
-
-  if (chefTrack) {
-    var chefCards     = chefTrack.querySelectorAll('.chef-card');
-    var chefIndex     = 0;
-    var chefVisible   = 3; /* cards visible at once */
-    var chefMax       = Math.max(0, chefCards.length - chefVisible);
-
-    function updateChefTrack() {
-      /* Width of one card = 100% / chefVisible of the container */
-      var cardPct = 100 / chefVisible;
-      chefTrack.style.transform = 'translateX(-' + (chefIndex * cardPct) + '%)';
-    }
-
-    function chefNext() {
-      if (chefIndex < chefMax) { chefIndex++; } else { chefIndex = 0; }
-      updateChefTrack();
-    }
-
-    function chefPrev() {
-      if (chefIndex > 0) { chefIndex--; } else { chefIndex = chefMax; }
-      updateChefTrack();
-    }
-
-    if (chefPrevBtn) chefPrevBtn.addEventListener('click', chefPrev);
-    if (chefNextBtn) chefNextBtn.addEventListener('click', chefNext);
-
-    /* Responsive: show 1 card on mobile */
-    function adjustChefVisible() {
-      var w = window.innerWidth;
-      if (w < 600)       { chefVisible = 1; }
-      else if (w < 900)  { chefVisible = 2; }
-      else               { chefVisible = 3; }
-      chefMax = Math.max(0, chefCards.length - chefVisible);
-      chefCards.forEach(function (card) {
-        card.style.minWidth = 'calc(' + (100 / chefVisible) + '% - 16px)';
-      });
-      if (chefIndex > chefMax) chefIndex = chefMax;
-      updateChefTrack();
-    }
-
-    adjustChefVisible();
-    window.addEventListener('resize', adjustChefVisible);
+      }
+    };
   }
 
-  /* ══════════════════════════════════════
-     4. TESTIMONIALS SLIDER
-  ══════════════════════════════════════ */
-  var testSlides   = document.querySelectorAll('.test-slide');
-  var testPrevBtn  = document.getElementById('testPrev');
-  var testNextBtn  = document.getElementById('testNext');
-  var testIndex    = 0;
-  var testTimer;
 
-  function goToTest(index) {
-    testSlides[testIndex].classList.remove('active');
-    testIndex = (index + testSlides.length) % testSlides.length;
-    testSlides[testIndex].classList.add('active');
-  }
 
-  function testNext() { goToTest(testIndex + 1); }
-  function testPrev() { goToTest(testIndex - 1); }
+  var track = document.getElementById('chefTrack');
+  var cards = track.querySelectorAll('.chef-card');
+  var pos = 0;
+  var show = 3;
+  var max = cards.length - show;
 
-  function startTestAuto() {
-    clearInterval(testTimer);
-    testTimer = setInterval(testNext, 6000);
-  }
-
-  if (testPrevBtn) testPrevBtn.addEventListener('click', function () { testPrev(); startTestAuto(); });
-  if (testNextBtn) testNextBtn.addEventListener('click', function () { testNext(); startTestAuto(); });
-
-  startTestAuto();
-
-  /* ══════════════════════════════════════
-     5. NAVBAR SCROLL
-  ══════════════════════════════════════ */
-  var navbar = document.getElementById('navbar');
-
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 60) {
-      navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,.7)';
+  document.getElementById('chefNext').onclick = function() {
+    if (pos < max) {
+      pos++;
     } else {
-      navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,.6)';
+      pos = 0;
     }
-  });
+    track.style.transform = 'translateX(-' + (pos * 33.33) + '%)';
+  };
 
-  /* ══════════════════════════════════════
-     6. BACK TO TOP
-  ══════════════════════════════════════ */
-  var backTop = document.getElementById('backTop');
-
-  window.addEventListener('scroll', function () {
-    if (backTop) {
-      if (window.scrollY > 400) {
-        backTop.classList.add('visible');
-      } else {
-        backTop.classList.remove('visible');
-      }
+  document.getElementById('chefPrev').onclick = function() {
+    if (pos > 0) {
+      pos--;
+    } else {
+      pos = max;
     }
-  });
+    track.style.transform = 'translateX(-' + (pos * 33.33) + '%)';
+  };
 
-  if (backTop) {
-    backTop.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
 
-  /* ══════════════════════════════════════
-     7. MOBILE MENU TOGGLE
-  ══════════════════════════════════════ */
-  var mobileToggle = document.getElementById('mobileToggle');
-  var navMenu      = document.getElementById('navMenu');
 
-  if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', function () {
-      navMenu.classList.toggle('open');
-      var icon = mobileToggle.querySelector('i');
-      if (navMenu.classList.contains('open')) {
-        icon.classList.replace('fa-bars', 'fa-times');
-      } else {
-        icon.classList.replace('fa-times', 'fa-bars');
-      }
-    });
-  }
+  var testSlides = document.querySelectorAll('.test-slide');
+  var testCurrent = 0;
 
-  /* Close mobile menu when clicking outside */
-  document.addEventListener('click', function (e) {
-    if (navMenu && mobileToggle) {
-      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('open');
-        var icon = mobileToggle.querySelector('i');
-        if (icon) icon.classList.replace('fa-times', 'fa-bars');
-      }
+  function showTest(n) {
+    for (var i = 0; i < testSlides.length; i++) {
+      testSlides[i].classList.remove('active');
     }
-  });
-
-  /* ══════════════════════════════════════
-     8. SMOOTH SCROLL for anchor links
-  ══════════════════════════════════════ */
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      var target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        var offset = 80; /* navbar height */
-        var top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
-        /* close mobile menu if open */
-        if (navMenu) navMenu.classList.remove('open');
-      }
-    });
-  });
-
-  /* ══════════════════════════════════════
-     9. BOOK A TABLE button feedback
-  ══════════════════════════════════════ */
-  var bookBtn = document.querySelector('.book-btn');
-  if (bookBtn) {
-    bookBtn.addEventListener('click', function () {
-      var orig = bookBtn.textContent;
-      bookBtn.innerHTML = '<i class="fas fa-check"></i> Reservation Sent!';
-      bookBtn.style.background = '#27ae60';
-      setTimeout(function () {
-        bookBtn.innerHTML = '<i class="fas fa-thumbs-up"></i> BOOK A TABLE';
-        bookBtn.style.background = '';
-      }, 3000);
-    });
+    if (n >= testSlides.length) n = 0;
+    if (n < 0) n = testSlides.length - 1;
+    testCurrent = n;
+    testSlides[testCurrent].classList.add('active');
   }
 
-  /* ══════════════════════════════════════
-     10. SEARCH TOGGLE
-  ══════════════════════════════════════ */
-  var searchBtn   = document.querySelector('.search-btn');
-  var searchInput = document.getElementById('searchInput');
-  if (searchBtn && searchInput) {
-    searchBtn.addEventListener('click', function () {
-      var q = searchInput.value.trim();
-      if (q) {
-        /* placeholder: could open a search modal */
-        alert('Searching for: ' + q);
-        searchInput.value = '';
-      }
-    });
-    searchInput.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') searchBtn.click();
-    });
-  }
+  document.getElementById('testNext').onclick = function() {
+    showTest(testCurrent + 1);
+  };
 
-});
-/* END OF SCRIPT */
+  document.getElementById('testPrev').onclick = function() {
+    showTest(testCurrent - 1);
+  };
+
+  setInterval(function() {
+    showTest(testCurrent + 1);
+  }, 6000);
+
+  var topBtn = document.getElementById('topBtn');
+
+  window.onscroll = function() {
+    if (window.scrollY > 400) {
+      topBtn.style.display = 'block';
+    } else {
+      topBtn.style.display = 'none';
+    }
+  };
+
+  topBtn.onclick = function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  var menuBtn = document.getElementById('menuBtn');
+  var navLinks = document.getElementById('navLinks');
+
+  menuBtn.onclick = function() {
+    if (navLinks.style.display === 'flex') {
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+    }
+  };
+
+  document.getElementById('bookBtn').onclick = function() {
+    this.innerHTML = '<i class="fas fa-check"></i> Reservation Sent!';
+    this.style.background = '#27ae60';
+    var btn = this;
+    setTimeout(function() {
+      btn.innerHTML = '<i class="fas fa-thumbs-up"></i> BOOK A TABLE';
+      btn.style.background = '';
+    }, 3000);
+  };
+
+};

@@ -6,756 +6,558 @@
     <title>Piquant</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oswald:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oswald:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
  
-  <!--
-  ╔══════════════════════════════════════════════════════╗
-  ║  ICONS — Font Awesome 6 (CDN)                        ║
-  ╚══════════════════════════════════════════════════════╝
-  -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
  
+  <!-- My Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
  
-  <div class="topbar">
-    <div class="topbar-left">
-      <span class="follow-label">FOLLOW US</span>
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+<!-- ======= TOP BAR ======= -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span>FOLLOW US</span>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+  </div>
+  <div class="topbar-right">
+    <span><i class="fas fa-phone"></i> RESERVATIONS + 1-444-123-459</span>
+    <a href="#book"><i class="far fa-calendar"></i> BOOK NOW</a>
+  </div>
+</div>
+ 
+<!-- ======= NAVBAR ======= -->
+<nav class="navbar">
+  <a href="#" class="logo">Piquant</a>
+ 
+  <ul class="nav-links" id="navLinks">
+ 
+    <li class="has-drop">
+      <a href="#">Home ★</a>
+      <ul class="dropdown">
+        <li><a href="#">Original</a></li>
+        <li><a href="#">Health Food</a></li>
+        <li><a href="#">Bar & Cafe</a></li>
+        <li><a href="#">Restaurant</a></li>
+        <li><a href="#">BBQ Home</a></li>
+      </ul>
+    </li>
+ 
+    <li class="has-drop">
+      <a href="#book">Reservations ★</a>
+      <ul class="dropdown">
+        <li><a href="#">Contact Form</a></li>
+        <li><a href="#">Open Table</a></li>
+      </ul>
+    </li>
+ 
+    <li class="has-drop">
+      <a href="#chef">Menu ★</a>
+      <ul class="dropdown">
+        <li><a href="#">Standard List</a></li>
+        <li><a href="#">Menu Gallery</a></li>
+        <li><a href="#">List With Image</a></li>
+        <li><a href="#">Single Menu Item</a></li>
+      </ul>
+    </li>
+ 
+    <li class="has-drop">
+      <a href="#">Pages ★</a>
+      <ul class="dropdown">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Meet The Chefs</a></li>
+        <li><a href="#">Contact Page</a></li>
+      </ul>
+    </li>
+ 
+    <li class="has-drop">
+      <a href="#news">Blog ★</a>
+      <ul class="dropdown">
+        <li><a href="#">Latest News</a></li>
+        <li><a href="#">Post Types</a></li>
+      </ul>
+    </li>
+ 
+    <li class="has-drop">
+      <a href="#">Shop ★</a>
+      <ul class="dropdown">
+        <li><a href="#">Three Columns</a></li>
+        <li><a href="#">Four Columns</a></li>
+        <li><a href="#">Single Product</a></li>
+      </ul>
+    </li>
+ 
+    <li><a href="#">Elements</a></li>
+ 
+  </ul>
+ 
+  <div class="nav-right">
+    <input type="text" placeholder="Search..." class="search-input" />
+    <button class="search-btn"><i class="fas fa-search"></i></button>
+    <span class="cart-icon">Cart <i class="fas fa-shopping-cart"></i> <span class="cart-num">0</span></span>
+  </div>
+ 
+  <button class="menu-btn" id="menuBtn"><i class="fas fa-bars"></i></button>
+</nav>
+ 
+<!-- ======= HERO SLIDER ======= -->
+<section class="hero">
+ 
+  <div class="slide active" id="slide1">
+    <img src="assets/img/hero-bg-1.jpg" alt="Hero 1" class="slide-bg" />
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <p class="chalk">Beef<br><span>EXCLUSIVE</span></p>
+      <h1>KNOW YOUR FOOD</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <a href="#" class="btn-yellow">PURCHASE</a>
     </div>
-    <div class="topbar-right">
-      <span><i class="fas fa-phone"></i>&nbsp;RESERVATIONS +&nbsp;1-444-123-459</span>
-      <a href="#book" class="topbar-book"><i class="far fa-calendar-alt"></i>&nbsp;BOOK NOW</a>
-      <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    <img src="assets/img/hero-burger.jpg" alt="Burger" class="slide-food-img" />
+  </div>
+ 
+  <div class="slide" id="slide2">
+    <img src="assets/img/hero-bg-2.jpg" alt="Hero 2" class="slide-bg" />
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <p class="chalk">Best Wine<br><span>IN TOWN</span></p>
+      <h1>HIGH QUALITY</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <a href="#" class="btn-yellow">PURCHASE</a>
+    </div>
+    <img src="assets/img/hero-cutlery.jpg" alt="Cutlery" class="slide-food-img" />
+  </div>
+ 
+  <div class="slide" id="slide3">
+    <img src="assets/img/hero-bg-3.jpg" alt="Hero 3" class="slide-bg" />
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <p class="chalk">Meat Menu<br><span>1889</span></p>
+      <h1>PIQUANT GRILL</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <a href="#" class="btn-yellow">PURCHASE</a>
+    </div>
+    <img src="assets/img/hero-pizza.jpg" alt="Pizza" class="slide-food-img" />
+  </div>
+ 
+  <button class="prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+  <button class="next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+  <p class="slide-counter" id="slideCounter">Next 2/3 ></p>
+ 
+</section>
+ 
+<!-- ======= 3 FEATURE CARDS ======= -->
+<section class="features">
+  <div class="feat-card">
+    <img src="assets/img/feat-1.jpg" alt="Delicious Food" />
+    <h3>DELICIOUS FOOD</h3>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+  </div>
+  <div class="feat-card">
+    <img src="assets/img/feat-2.jpg" alt="For Every Taste" />
+    <h3>FOR EVERY TASTE</h3>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+  </div>
+  <div class="feat-card">
+    <img src="assets/img/feat-3.jpg" alt="The Real Burgers" />
+    <h3>THE REAL BURGERS</h3>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+  </div>
+</section>
+ 
+<!-- ======= ART GALLERY ======= -->
+<section class="gallery" id="gallery">
+ 
+  <div class="gallery-header">
+    <h2 class="script-font">Art Gallery</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all"><i class="fas fa-mug-hot"></i> Food & Drinks</button>
+      <button class="filter-btn" data-filter="interior"><i class="fas fa-coffee"></i> Interior</button>
+      <button class="filter-btn" data-filter="desserts"><i class="fas fa-gift"></i> Deserts</button>
+      <button class="filter-btn" data-filter="recipes"><i class="fas fa-file-alt"></i> Recipes</button>
+    </div>
+    <a href="#" class="btn-outline"><i class="fas fa-thumbs-up"></i> SEE FULL GALLERY</a>
+  </div>
+ 
+  <div class="gallery-images" id="galleryImages">
+    <div class="gal-img" data-cat="all">
+      <img src="assets/img/gallery-1.jpg" alt="Carne Asada Tacos" />
+      <p>CARNE ASADA TACOS</p>
+    </div>
+    <div class="gal-img" data-cat="desserts">
+      <img src="assets/img/gallery-2.jpg" alt="Mango Chile Chutney" />
+      <p>MANGO-CHILE CHUTNEY</p>
+    </div>
+    <div class="gal-img" data-cat="interior">
+      <img src="assets/img/gallery-3.jpg" alt="Taste Buds" />
+      <p>A TREAT FOR YOUR TASTE BUDS</p>
+    </div>
+    <div class="gal-img" data-cat="all">
+      <img src="assets/img/gallery-4.jpg" alt="Wasabi Wednesday" />
+      <p>WASABI WEDNESDAY</p>
+    </div>
+    <div class="gal-img" data-cat="interior">
+      <img src="assets/img/gallery-5.jpg" alt="Amazing Interior" />
+      <p>AMAZING INTERIOR</p>
     </div>
   </div>
  
-  <!-- ════════════════ NAVBAR ════════════════ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="logo">Piquant</a>
+</section>
  
-      <ul class="nav-menu" id="navMenu">
+<!-- ======= WELCOME ======= -->
+<section class="welcome" id="welcome">
+  <div class="welcome-text">
+    <h2>WELCOME TO PIQUANT</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <a href="#" class="btn-yellow">READ MORE</a>
+  </div>
+  <div class="welcome-img">
+    <img src="assets/img/welcome.jpg" alt="Welcome to Piquant" />
+  </div>
+</section>
  
-        <!-- Home -->
-        <li class="nav-item has-dropdown">
-          <a href="#" class="nav-link active">Home</a><span class="nav-sep">★</span>
-          <ul class="dropdown">
-            <li><a href="#"><i class="fas fa-caret-right"></i> Original</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Health Food</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Bar &amp; Cafe <i class="fas fa-star yellow-star"></i></a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Restaurant</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> BBQ Home</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Fullscreen</a></li>
-          </ul>
-        </li>
+<!-- ======= CHEF RECOMMENDATIONS ======= -->
+<section class="chef" id="chef">
+  <h2>RECOMMENDED BY OUR CHEF</h2>
+  <p class="chef-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
  
-        <li class="nav-item has-dropdown">
-          <a href="#book" class="nav-link">Reservations</a><span class="nav-sep">★</span>
-          <ul class="dropdown">
-            <li><a href="#"><i class="fas fa-caret-right"></i> Contact Form</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Open Table</a></li>
-          </ul>
-        </li>
+  <div class="chef-slider">
+    <button class="chef-prev" id="chefPrev"><i class="fas fa-chevron-left"></i></button>
  
-        <!-- Menu -->
-        <li class="nav-item has-dropdown">
-          <a href="#chef" class="nav-link">Menu</a><span class="nav-sep">★</span>
-          <ul class="dropdown">
-            <li><a href="#"><i class="fas fa-caret-right"></i> Standard List</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Menu Gallery</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Gallery &amp; List Combo</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> List With Image</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Single Menu Item</a></li>
-          </ul>
-        </li>
+    <div class="chef-track" id="chefTrack">
  
-        <!-- Pages — mega dropdown -->
-        <li class="nav-item has-mega">
-          <a href="#" class="nav-link">Pages</a><span class="nav-sep">★</span>
-          <div class="mega-dropdown">
-            <div class="mega-col">
-              <h5>ABOUT PAGES</h5>
-              <ul>
-                <li><a href="#"><i class="fas fa-caret-right"></i> About Us</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Our Story</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Our Services</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> What We Offer</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <h5>INFO PAGES</h5>
-              <ul>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Meet The Chefs</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Food Gallery</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Contact Page</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Contact Page 2</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <h5>TITLE EXAMPLES</h5>
-              <ul>
-                <li><a href="#"><i class="fas fa-caret-right"></i> System Title</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Classic Title</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Overlapping Title</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Graphic Title</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Parallax Title</a></li>
-              </ul>
-            </div>
-            <div class="mega-col mega-img-col">
-              <h5>TODAY'S SPECIALTY</h5>
-              <!--
-                IMAGE: Roasted chicken — Unsplash
-                URL: https://images.unsplash.com/photo-1598103442097-8b74394b95c3?w=260&q=80
-                Save as: assets/img/specialty.jpg
-              -->
-              <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c3?w=260&q=80" alt="Today's Specialty" />
-              <a href="#" class="mega-recipe-link"><i class="fas fa-caret-right"></i> See The Recipe</a>
-            </div>
-          </div>
-        </li>
- 
-        <!-- Blog -->
-        <li class="nav-item has-dropdown">
-          <a href="#news" class="nav-link">Blog</a><span class="nav-sep">★</span>
-          <ul class="dropdown">
-            <li><a href="#"><i class="fas fa-caret-right"></i> Latest News</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Post Types</a></li>
-          </ul>
-        </li>
- 
-        <!-- Shop -->
-        <li class="nav-item has-dropdown">
-          <a href="#" class="nav-link">Shop</a><span class="nav-sep">★</span>
-          <ul class="dropdown">
-            <li><a href="#"><i class="fas fa-caret-right"></i> Shop With Sidebar</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Three Columns</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Four Columns</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Four Columns Full Width</a></li>
-            <li><a href="#"><i class="fas fa-caret-right"></i> Single Product</a></li>
-          </ul>
-        </li>
- 
-        <!-- Elements — mega dropdown -->
-        <li class="nav-item has-mega">
-          <a href="#" class="nav-link">Elements</a>
-          <div class="mega-dropdown mega-elements">
-            <div class="mega-col">
-              <h5>TYPOGRAPHY &amp; ICONS</h5>
-              <ul>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Headings</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Columns</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Blockquotes</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Custom Fonts</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Lists</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Separators</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Icon</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <h5>CLASSIC ELEMENTS</h5>
-              <ul>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Tabbed Gallery <i class="fas fa-star yellow-star"></i></a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Restaurant Menu <i class="fas fa-star yellow-star"></i></a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Client Logo Carousel</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Blog Posts</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Testimonials</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Team</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Google Maps</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <h5>UI ELEMENTS</h5>
-              <ul>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Interface Colors</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Buttons</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Accordions</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Tabs</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Forms <i class="fas fa-star yellow-star"></i></a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Call To Action</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <h5>GRAPHIC ELEMENTS</h5>
-              <ul>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Working Hours</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Interactive Banners</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Pricing Tables</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Counters</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Skill Bars</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Pie Charts</a></li>
-                <li><a href="#"><i class="fas fa-caret-right"></i> Process</a></li>
-              </ul>
-            </div>
-          </div>
-        </li>
- 
-      </ul><!-- /nav-menu -->
- 
-      <div class="nav-actions">
-        <div class="search-wrap">
-          <input type="text" placeholder="Search..." id="searchInput" />
-          <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+      <div class="chef-card">
+        <div class="chef-img-box">
+          <span class="tag-new">NEW</span>
+          <img src="assets/img/food-1.jpg" alt="Kung Pao Pastrami" />
+          <span class="price-tag">$12</span>
         </div>
-        <div class="cart-wrap">
-          <span>Cart</span>
-          <i class="fas fa-shopping-cart"></i>
-          <span class="cart-count">0</span>
+        <div class="chef-text">
+          <h4>KUNG PAO PASTRAMI</h4>
+          <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
         </div>
       </div>
  
-    </div><!-- /nav-inner -->
-  </nav>
- 
-  <!-- ════════════════ HERO SLIDER ════════════════ -->
-  <!--
-  HERO BACKGROUND IMAGES — Unsplash (dark restaurant / food textures)
-  Slide 1: https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=1600&q=80  → assets/img/hero-bg-1.jpg
-  Slide 2: https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80  → assets/img/hero-bg-2.jpg
-  Slide 3: https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80  → assets/img/hero-bg-3.jpg
- 
-  HERO RIGHT IMAGES — chalk-style food photos
-  Slide 1 burger: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80  → assets/img/hero-burger.jpg
-  Slide 2 cutlery: https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80  → assets/img/hero-cutlery.jpg
-  Slide 3 pizza: https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80  → assets/img/hero-pizza.jpg
-  -->
-  <section class="hero" id="hero">
-    <div class="slider-wrapper">
- 
-      <!-- SLIDE 1 -->
-      <div class="slide active" data-bg="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=1600&q=80">
-        <div class="slide-overlay"></div>
-        <div class="slide-content">
-          <div class="chalk-title">
-            <span class="chalk-big">Beef</span>
-            <span class="chalk-sub">EXCLUSIVE</span>
-          </div>
-          <h1 class="slide-heading">KNOW YOUR FOOD</h1>
-          <p class="slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-          <a href="#" class="btn-yellow">PURCHASE</a>
+      <div class="chef-card">
+        <div class="chef-img-box">
+          <img src="assets/img/food-2.jpg" alt="Jalapeno Mango Salsa" />
+          <span class="price-tag">$45</span>
         </div>
-        <div class="slide-right-img">
-          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80" alt="Burger" />
+        <div class="chef-text">
+          <h4>JALAPENO-MANGO SALSA</h4>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
         </div>
       </div>
  
-      <!-- SLIDE 2 -->
-      <div class="slide" data-bg="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80">
-        <div class="slide-overlay"></div>
-        <div class="slide-content">
-          <div class="chalk-title">
-            <span class="chalk-script">Best Wine</span>
-            <span class="chalk-sub">IN TOWN</span>
-          </div>
-          <h1 class="slide-heading">HIGH QUALITY</h1>
-          <p class="slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-          <a href="#" class="btn-yellow">PURCHASE</a>
+      <div class="chef-card">
+        <div class="chef-img-box">
+          <img src="assets/img/food-3.jpg" alt="Spicy Fried Rice" />
+          <span class="price-tag">$38</span>
         </div>
-        <div class="slide-right-img">
-          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80" alt="Kitchen utensils" />
+        <div class="chef-text">
+          <h4>SPICY FRIED RICE & BACON</h4>
+          <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.</p>
         </div>
       </div>
  
-      <!-- SLIDE 3 -->
-      <div class="slide" data-bg="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=80">
-        <div class="slide-overlay"></div>
-        <div class="slide-content">
-          <div class="chalk-title">
-            <span class="chalk-script">Meat Menu</span>
-            <span class="chalk-sub">1889</span>
-          </div>
-          <h1 class="slide-heading">PIQUANT GRILL</h1>
-          <p class="slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-          <a href="#" class="btn-yellow">PURCHASE</a>
+      <div class="chef-card">
+        <div class="chef-img-box">
+          <img src="assets/img/food-4.jpg" alt="Shrimp Curry" />
+          <span class="price-tag">$55</span>
         </div>
-        <div class="slide-right-img">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80" alt="Pizza" />
+        <div class="chef-text">
+          <h4>SHRIMP CURRY</h4>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit consequuntur.</p>
         </div>
       </div>
  
-    </div><!-- /slider-wrapper -->
- 
-    <button class="slider-btn prev" id="heroPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-    <button class="slider-btn next" id="heroNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-    <div class="slide-counter" id="slideCounter">Next 1/3 &gt;</div>
-  </section>
- 
-  <!-- ════════════════ FEATURES — 3 CARDS ════════════════ -->
-  <!--
-  FEATURE IMAGES — Unsplash
-  Card 1 sliders: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80  → assets/img/feat-1.jpg
-  Card 2 onion rings: https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&q=80  → assets/img/feat-2.jpg
-  Card 3 burger: https://images.unsplash.com/photo-1586816001966-79b736744398?w=600&q=80  → assets/img/feat-3.jpg
-  -->
-  <section class="features-section">
-    <div class="features-grid">
-      <div class="feat-card">
-        <div class="feat-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Delicious Food" /></div>
-        <h3>DELICIOUS FOOD</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <div class="chef-card">
+        <div class="chef-img-box">
+          <span class="tag-rec">Recommended</span>
+          <img src="assets/img/food-5.jpg" alt="Chicken Doro Wat" />
+          <span class="price-tag">$23</span>
+        </div>
+        <div class="chef-text">
+          <h4>CHICKEN DORO WAT</h4>
+          <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip commodo.</p>
+        </div>
       </div>
-      <div class="feat-card">
-        <div class="feat-img"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&q=80" alt="For Every Taste" /></div>
-        <h3>FOR EVERY TASTE</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+ 
+      <div class="chef-card">
+        <div class="chef-img-box">
+          <img src="assets/img/food-6.jpg" alt="Kung Pao Chicken" />
+          <span class="price-tag">$46</span>
+        </div>
+        <div class="chef-text">
+          <h4>KUNG PAO CHICKEN</h4>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+        </div>
       </div>
-      <div class="feat-card">
-        <div class="feat-img"><img src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=600&q=80" alt="The Real Burgers" /></div>
-        <h3>THE REAL BURGERS</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+ 
+    </div>
+ 
+    <button class="chef-next" id="chefNext"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+ 
+<!-- ======= PROMO SECTION ======= -->
+<section class="promo">
+  <h2>SIMPLE MODIFICATION</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+  <div class="promo-row">
+    <div class="promo-box">
+      <img src="assets/img/promo-1.jpg" alt="Recipes" />
+      <div class="promo-label">
+        <p>TASTE OUR</p>
+        <p>EXQUISITE RECIPES</p>
       </div>
     </div>
-  </section>
- 
-  <!-- ════════════════ ART GALLERY ════════════════ -->
-  <!--
-  GALLERY IMAGES — Unsplash
-  1: https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80   → assets/img/gallery-1.jpg  (cat: food)
-  2: https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80   → assets/img/gallery-2.jpg  (cat: desserts)
-  3: https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80      → assets/img/gallery-3.jpg  (cat: interior)
-  4: https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&q=80   → assets/img/gallery-4.jpg  (cat: food)
-  5: https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80   → assets/img/gallery-5.jpg  (cat: interior)
-  -->
-  <section class="gallery-section" id="gallery">
-    <div class="gallery-header">
-      <h2 class="gallery-title">Art Gallery</h2>
-      <nav class="gallery-filters" aria-label="Gallery filters">
-        <button class="gf-btn active" data-filter="all"><i class="fas fa-mug-hot"></i> Food &amp; Drinks</button>
-        <button class="gf-btn" data-filter="interior"><i class="fas fa-coffee"></i> Interior</button>
-        <button class="gf-btn" data-filter="desserts"><i class="fas fa-gift"></i> Deserts</button>
-        <button class="gf-btn" data-filter="recipes"><i class="fas fa-file-alt"></i> Recipes</button>
-      </nav>
-      <a href="#" class="btn-outline-white"><i class="fas fa-thumbs-up"></i> SEE FULL GALLERY</a>
-    </div>
-    <div class="gallery-grid" id="galleryGrid">
-      <div class="gallery-item" data-cat="all">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80" alt="Carne Asada Tacos" />
-        <div class="gallery-caption">CARNE ASADA TACOS</div>
-      </div>
-      <div class="gallery-item" data-cat="desserts">
-        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80" alt="Mango Chile Chutney" />
-        <div class="gallery-caption">MANGO-CHILE CHUTNEY</div>
-      </div>
-      <div class="gallery-item" data-cat="interior">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80" alt="A Treat For Your Taste Buds" />
-        <div class="gallery-caption">A TREAT FOR YOUR TASTE BUDS</div>
-      </div>
-      <div class="gallery-item" data-cat="all">
-        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&q=80" alt="Wasabi Wednesday" />
-        <div class="gallery-caption">WASABI WEDNESDAY</div>
-      </div>
-      <div class="gallery-item" data-cat="interior">
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80" alt="Amazing Interior" />
-        <div class="gallery-caption">AMAZING INTERIOR</div>
-      </div>
-    </div>
-  </section>
- 
-  <!-- ════════════════ WELCOME ════════════════ -->
-  <!--
-  WELCOME IMAGE — Unsplash
-  https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80  → assets/img/welcome.jpg
-  -->
-  <section class="welcome-section" id="welcome">
-    <div class="welcome-inner">
-      <div class="welcome-text">
-        <h2>WELCOME TO PIQUANT</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <a href="#" class="btn-yellow">READ MORE</a>
-      </div>
-      <div class="welcome-image">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80" alt="Welcome to Piquant" />
-      </div>
-    </div>
-  </section>
- 
-  <!-- ════════════════ CHEF RECOMMENDATIONS ════════════════ -->
-  <!--
-  CHEF CARD IMAGES — Unsplash
-  1: https://images.unsplash.com/photo-1432139509613-5c4255815697?w=500&q=80  → assets/img/food-1.jpg
-  2: https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&q=80  → assets/img/food-2.jpg
-  3: https://images.unsplash.com/photo-1586816001966-79b736744398?w=500&q=80  → assets/img/food-3.jpg
-  4: https://images.unsplash.com/photo-1544025162-d76594e8bb51?w=500&q=80     → assets/img/food-4.jpg
-  5: https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=500&q=80  → assets/img/food-5.jpg
-  6: https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=500&q=80  → assets/img/food-6.jpg
- 
-  CHEF BG: https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=60  → assets/img/chef-bg.jpg
-  -->
-  <section class="chef-section" id="chef">
-    <div class="chef-overlay">
-      <div class="chef-header">
-        <h2>RECOMMENDED BY OUR CHEF</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-      </div>
-      <div class="chef-carousel-wrap">
-        <button class="chef-arrow chef-prev-btn" id="chefPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-        <div class="chef-track-container">
-          <div class="chef-track" id="chefTrack">
- 
-            <div class="chef-card">
-              <div class="chef-img-wrap">
-                <span class="badge badge-new">NEW</span>
-                <img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?w=500&q=80" alt="Kung Pao Pastrami" />
-                <div class="price-bubble">$12</div>
-              </div>
-              <div class="chef-body">
-                <h4>KUNG PAO PASTRAMI</h4>
-                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
-              </div>
-            </div>
- 
-            <div class="chef-card">
-              <div class="chef-img-wrap">
-                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&q=80" alt="Jalapeno Mango Salsa" />
-                <div class="price-bubble">$45</div>
-              </div>
-              <div class="chef-body">
-                <h4>JALAPENO-MANGO SALSA</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-              </div>
-            </div>
- 
-            <div class="chef-card">
-              <div class="chef-img-wrap">
-                <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=500&q=80" alt="Spicy Fried Rice & Bacon" />
-                <div class="price-bubble">$38</div>
-              </div>
-              <div class="chef-body">
-                <h4>SPICY FRIED RICE &amp; BACON</h4>
-                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur adipisci velit.</p>
-              </div>
-            </div>
- 
-            <div class="chef-card">
-              <div class="chef-img-wrap">
-                <img src="https://images.unsplash.com/photo-1544025162-d76594e8bb51?w=500&q=80" alt="Shrimp Curry" />
-                <div class="price-bubble">$55</div>
-              </div>
-              <div class="chef-body">
-                <h4>SHRIMP CURRY</h4>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, consequuntur.</p>
-              </div>
-            </div>
- 
-            <div class="chef-card">
-              <div class="chef-img-wrap">
-                <span class="badge badge-rec">Recommended</span>
-                <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=500&q=80" alt="Chicken Doro Wat" />
-                <div class="price-bubble">$23</div>
-              </div>
-              <div class="chef-body">
-                <h4>CHICKEN DORO WAT</h4>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.</p>
-              </div>
-            </div>
- 
-            <div class="chef-card">
-              <div class="chef-img-wrap">
-                <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=500&q=80" alt="Kung Pao Chicken" />
-                <div class="price-bubble">$46</div>
-              </div>
-              <div class="chef-body">
-                <h4>KUNG PAO CHICKEN</h4>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
-              </div>
-            </div>
- 
-          </div><!-- /chef-track -->
-        </div>
-        <button class="chef-arrow chef-next-btn" id="chefNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </section>
- 
-  <!-- ════════════════ SIMPLE MODIFICATION ════════════════ -->
-  <!--
-  PROMO IMAGES — Unsplash
-  1: https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80  → assets/img/promo-1.jpg
-  2: https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&q=80  → assets/img/promo-2.jpg
-  3: https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80  → assets/img/promo-3.jpg
-  -->
-  <section class="simple-mod-section">
-    <div class="simple-mod-inner">
-      <div class="sm-text">
-        <h2>SIMPLE MODIFICATION</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      </div>
-      <div class="promo-grid">
-        <div class="promo-card">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Recipes" />
-          <div class="promo-label">
-            <p>TASTE OUR</p>
-            <p>EXQUISITE RECIPES</p>
-          </div>
-        </div>
-        <div class="promo-card">
-          <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&q=80" alt="Offer" />
-          <div class="promo-label">
-            <p class="yellow-txt">SAVE 30%</p>
-            <p>ONLY TODAY'S OFFER</p>
-          </div>
-        </div>
-        <div class="promo-card">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Interior" />
-          <div class="promo-label">
-            <p>DISCOVER</p>
-            <p>AMAZING INTERIOR</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <!-- ════════════════ HOT & SPICY + LET'S DO LUNCH ════════════════ -->
-  <section class="hot-section">
-    <div class="hs-dark">
-      <h3>HOT &amp; SPICY</h3>
-      <p>Vivamus sed fermentum tellus. Donec quis elit sapien. Aliquam commodo tortor nisi, nec varius mi finibus at. In nulla libero, dictum vel.</p>
-      <a href="#" class="btn-yellow">READ MORE</a>
-    </div>
-    <div class="hs-img">
-      <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=700&q=80" alt="Save 30%" />
-      <div class="hs-label">
-        <p class="yellow-txt">SAVE 30%</p>
+    <div class="promo-box">
+      <img src="assets/img/promo-2.jpg" alt="Offer" />
+      <div class="promo-label">
+        <p class="yellow">SAVE 30%</p>
         <p>ONLY TODAY'S OFFER</p>
       </div>
     </div>
-    <div class="hs-img">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80" alt="Amazing Interior" />
-      <div class="hs-label">
+    <div class="promo-box">
+      <img src="assets/img/promo-3.jpg" alt="Interior" />
+      <div class="promo-label">
         <p>DISCOVER</p>
         <p>AMAZING INTERIOR</p>
       </div>
     </div>
-    <div class="hs-dark">
-      <h3>LET'S DO LUNCH</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat dictum lacus, ut hendrerit mi pulvinar vel. Fusce id nibh at neque</p>
-      <a href="#" class="btn-yellow">READ MORE</a>
+  </div>
+</section>
+ 
+<!-- ======= HOT & SPICY ======= -->
+<section class="hot-section">
+  <div class="hot-dark">
+    <h3>HOT & SPICY</h3>
+    <p>Vivamus sed fermentum tellus. Donec quis elit sapien. Aliquam commodo tortor nisi, nec varius mi finibus at.</p>
+    <a href="#" class="btn-yellow">READ MORE</a>
+  </div>
+  <div class="hot-img">
+    <img src="assets/img/promo-2.jpg" alt="Today Offer" />
+    <div class="hot-label">
+      <p class="yellow">SAVE 30%</p>
+      <p>ONLY TODAY'S OFFER</p>
     </div>
-  </section>
+  </div>
+  <div class="hot-img">
+    <img src="assets/img/promo-3.jpg" alt="Interior" />
+    <div class="hot-label">
+      <p>DISCOVER</p>
+      <p>AMAZING INTERIOR</p>
+    </div>
+  </div>
+  <div class="hot-dark">
+    <h3>LET'S DO LUNCH</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat dictum lacus ut hendrerit mi pulvinar.</p>
+    <a href="#" class="btn-yellow">READ MORE</a>
+  </div>
+</section>
  
-  <!-- ════════════════ TESTIMONIALS ════════════════ -->
-  <!--
-  TESTIMONIAL BG: https://images.unsplash.com/photo-1550547660-d9450f859349?w=1600&q=60  → assets/img/test-bg.jpg
-  -->
-  <section class="testimonials-section">
-    <div class="test-overlay">
-      <div class="test-inner">
-        <i class="fas fa-quote-right quote-icon"></i>
-        <h2>HAPPY CUSTOMERS</h2>
-        <p class="test-sub">— Delicious Food —</p>
+<!-- ======= TESTIMONIALS ======= -->
+<section class="testimonials">
+  <img src="assets/img/hero-bg-1.jpg" alt="" class="test-bg" />
+  <div class="test-overlay">
+    <i class="fas fa-quote-right test-icon"></i>
+    <h2>HAPPY CUSTOMERS</h2>
+    <p class="test-sub">— Delicious Food —</p>
  
-        <div class="test-slider" id="testSlider">
-          <div class="test-slide active">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."</p>
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-            <strong>Emma Fernandez</strong>
-          </div>
-          <div class="test-slide">
-            <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia."</p>
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-            <strong>Walter Soto</strong>
-          </div>
-          <div class="test-slide">
-            <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit."</p>
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <strong>Donald Munoz</strong>
-          </div>
-        </div>
+    <div class="test-box" id="testBox">
  
-        <button class="test-arrow test-prev" id="testPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-        <button class="test-arrow test-next" id="testNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+      <div class="test-slide active">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."</p>
+        <div class="stars">★★★★☆</div>
+        <strong>Emma Fernandez</strong>
       </div>
-    </div>
-  </section>
  
-  <!-- ════════════════ LATEST NEWS ════════════════ -->
-  <!--
-  NEWS IMAGES — Unsplash
-  1: https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80  → assets/img/news-1.jpg
-  2: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80  → assets/img/news-2.jpg
-  3: https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80  → assets/img/news-3.jpg
-  -->
-  <section class="news-section" id="news">
-    <div class="news-inner">
-      <h2>LATEST NEWS</h2>
-      <p class="news-sub">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-      <div class="news-grid">
-        <article class="news-card">
-          <div class="news-img"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="Nougat Ice Cream" /></div>
-          <div class="news-body">
-            <span class="news-date"><i class="far fa-calendar-alt"></i> NOV 04, 2015</span>
-            <h4>NOUGAT ICE CREAM</h4>
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque at tellus felis. Sed fringilla, tellus non congue porttitor, dui eros fauci...</p>
-          </div>
-        </article>
-        <article class="news-card">
-          <div class="news-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Brazilian Burger" /></div>
-          <div class="news-body">
-            <span class="news-date"><i class="far fa-calendar-alt"></i> NOV 04, 2015</span>
-            <h4>BRAZILIAN BURGER</h4>
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque at tellus felis. Sed fringilla, tellus non congue porttitor, dui eros fauci...</p>
-          </div>
-        </article>
-        <article class="news-card">
-          <div class="news-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Grilled Duck Breasts" /></div>
-          <div class="news-body">
-            <span class="news-date"><i class="far fa-calendar-alt"></i> NOV 04, 2015</span>
-            <h4>GRILLED DUCK BREASTS</h4>
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque at tellus felis. Sed fringilla, tellus non congue porttitor, dui eros fauci...</p>
-          </div>
-        </article>
+      <div class="test-slide">
+        <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate."</p>
+        <div class="stars">★★★☆☆</div>
+        <strong>Walter Soto</strong>
       </div>
-    </div>
-  </section>
  
-  <!-- ════════════════ BON APPETIT BANNER ════════════════ -->
-  <!--
-  BON APPETIT BG: https://images.unsplash.com/photo-1432139509613-5c4255815697?w=1600&q=80  → assets/img/bon-appetit.jpg
-  -->
-  <section class="bon-section">
-    <img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?w=1600&q=80" alt="Bon Appetit" class="bon-bg" />
-    <div class="bon-overlay"></div>
-    <div class="bon-text">
-      <p class="bon-script">Food and Drink</p>
-      <p class="bon-premium">PREMIUM GOODS</p>
-      <div class="bon-banner">BON APPETIT</div>
-    </div>
-  </section>
- 
-  <!-- ════════════════ AWARD + OPENING HOURS ════════════════ -->
-  <section class="award-section" id="contact">
-    <div class="award-inner">
-      <div class="award-left">
-        <h2>AWARD WINNING RESTAURANT</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-        <!--
-        AWARD BADGE IMAGES — Unsplash circular crops (save to assets/img/)
-        These are placeholder circular food/wine images to mimic badge aesthetics.
-        badge-1: https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=80&h=80&q=80
-        badge-2: https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=80&h=80&q=80
-        badge-3: https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=80&h=80&q=80
-        badge-4: https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=80&h=80&q=80
-        badge-5: https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=80&h=80&q=80
-        -->
-        <div class="award-badges">
-          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=80&h=80&q=80" alt="Good Food Award" />
-          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=80&h=80&q=80" alt="Great Taste" />
-          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=80&h=80&q=80" alt="Finalist 2014" />
-          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=80&h=80&q=80" alt="Food Awards Winner" />
-          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=80&h=80&q=80" alt="NZ Food Awards" />
-        </div>
-        <h4>CONTACT INFO</h4>
-        <div class="contact-info-grid">
-          <span><i class="fas fa-map-marker-alt"></i> Raymond Boulevard 224, New York</span>
-          <span><i class="fas fa-envelope"></i> piquant@qodeinteractive.com</span>
-          <span><i class="fas fa-phone"></i> 1-444-123-4559</span>
-          <span><i class="fas fa-rss"></i> qodeinteractive.com</span>
-        </div>
+      <div class="test-slide">
+        <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto."</p>
+        <div class="stars">★★★★★</div>
+        <strong>Donald Munoz</strong>
       </div>
-      <div class="award-right">
-        <div class="opening-hours-box">
-          <h3>OPENING <span class="yellow-txt">HOURS</span></h3>
-          <ul class="hours-list">
-            <li><span>Monday</span><span>9:00 – 22:00</span></li>
-            <li><span>Tuesday</span><span class="closed-txt">CLOSED</span></li>
-            <li><span>Wednesday</span><span>9:00 – 22:00</span></li>
-            <li><span>Thursday</span><span>9:00 – 22:00</span></li>
-            <li><span>Friday</span><span>9:00 – 1:00</span></li>
-            <li><span>Saturday</span><span>10:00 – 1:00</span></li>
-            <li><span>Sunday</span><span>10:00 – 22:00</span></li>
-          </ul>
-        </div>
+ 
+    </div>
+ 
+    <button class="test-prev" id="testPrev"><i class="fas fa-chevron-left"></i></button>
+    <button class="test-next" id="testNext"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+ 
+<!-- ======= LATEST NEWS ======= -->
+<section class="news" id="news">
+  <h2>LATEST NEWS</h2>
+  <p class="news-sub">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+  <div class="news-row">
+ 
+    <div class="news-card">
+      <img src="assets/img/news-1.jpg" alt="Nougat Ice Cream" />
+      <div class="news-text">
+        <span><i class="far fa-calendar-alt"></i> NOV 04, 2015</span>
+        <h4>NOUGAT ICE CREAM</h4>
+        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque at tellus felis. Sed fringilla porttitor dui eros fauci...</p>
       </div>
     </div>
-  </section>
  
-  <!-- ════════════════ BOOK A TABLE ════════════════ -->
-  <section class="book-section" id="book">
-    <div class="book-form">
-      <div class="book-field">
-        <input type="number" value="1" min="1" max="20" />
-        <i class="fas fa-user"></i>
-      </div>
-      <span class="book-word">for</span>
-      <div class="book-field">
-        <input type="date" value="2026-03-23" />
-        <i class="far fa-calendar-alt"></i>
-      </div>
-      <span class="book-word">at</span>
-      <div class="book-field">
-        <input type="time" value="19:00" />
-        <i class="far fa-clock"></i>
-      </div>
-      <button class="btn-yellow book-btn"><i class="fas fa-thumbs-up"></i> BOOK A TABLE</button>
-    </div>
-    <p class="powered">POWERED BY OPENTABLE</p>
-  </section>
- 
-  <!-- ════════════════ FOOTER ════════════════ -->
-  <!--
-  INSTAGRAM GRID IMAGES (footer) — Unsplash small crops
-  ig-1: https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=100&q=80
-  ig-2: https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=100&q=80
-  ig-3: https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=100&q=80
-  ig-4: https://images.unsplash.com/photo-1432139509613-5c4255815697?w=100&q=80
-  ig-5: https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=100&q=80
-  ig-6: https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=100&q=80
-  -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-col">
-        <a href="#" class="logo footer-logo">Piquant</a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        <p><i class="fas fa-envelope"></i> piquant@qodeinteractive.com</p>
-        <p><i class="fas fa-phone"></i> 1-444-123-4559</p>
-        <p><i class="fas fa-map-marker-alt"></i> Raymond Boulevard 224, New York</p>
-      </div>
-      <div class="footer-col">
-        <h4>RECENT POSTS</h4>
-        <ul class="footer-posts">
-          <li><a href="#">Chicken Tinga Nachos</a></li>
-          <li><a href="#">Sweet and Sour Pork Chops</a></li>
-          <li><a href="#">Green Chile And Chicken Stew</a></li>
-          <li><a href="#">Pecan Pie Macarons</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>INSTAGRAM</h4>
-        <div class="footer-ig-grid">
-          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=100&q=80" alt="ig 1" />
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=100&q=80" alt="ig 2" />
-          <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=100&q=80" alt="ig 3" />
-          <img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?w=100&q=80" alt="ig 4" />
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=100&q=80" alt="ig 5" />
-          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=100&q=80" alt="ig 6" />
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>TWITTER FEED</h4>
-        <p class="twitter-msg">Couldn't connect with Twitter</p>
+    <div class="news-card">
+      <img src="assets/img/news-2.jpg" alt="Brazilian Burger" />
+      <div class="news-text">
+        <span><i class="far fa-calendar-alt"></i> NOV 04, 2015</span>
+        <h4>BRAZILIAN BURGER</h4>
+        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque at tellus felis. Sed fringilla porttitor dui eros fauci...</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2015 Qode Interactive, All Rights Reserved</span>
-      <div class="footer-social">
-        <span>Follow Us</span>
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+ 
+    <div class="news-card">
+      <img src="assets/img/news-3.jpg" alt="Grilled Duck Breasts" />
+      <div class="news-text">
+        <span><i class="far fa-calendar-alt"></i> NOV 04, 2015</span>
+        <h4>GRILLED DUCK BREASTS</h4>
+        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque at tellus felis. Sed fringilla porttitor dui eros fauci...</p>
       </div>
     </div>
-  </footer>
  
-  <!-- Back to Top -->
-  <a href="#" class="back-top" id="backTop">TOP</a>
+  </div>
+</section>
  
-  <script src="assets/js/script.js"></script>
+<!-- ======= BON APPETIT BANNER ======= -->
+<section class="bon-appetit">
+  <img src="assets/img/bon-appetit.jpg" alt="Bon Appetit" class="bon-bg" />
+  <div class="bon-text">
+    <p class="script-font">Food and Drink</p>
+    <p class="bon-small">PREMIUM GOODS</p>
+    <p class="bon-big">BON APPETIT</p>
+  </div>
+</section>
+ 
+<!-- ======= AWARD + OPENING HOURS ======= -->
+<section class="award" id="contact">
+  <div class="award-left">
+    <h2>AWARD WINNING RESTAURANT</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+    <div class="badges">
+      <img src="assets/img/badge-1.jpg" alt="Award 1" />
+      <img src="assets/img/badge-2.jpg" alt="Award 2" />
+      <img src="assets/img/badge-3.jpg" alt="Award 3" />
+      <img src="assets/img/badge-4.jpg" alt="Award 4" />
+      <img src="assets/img/badge-5.jpg" alt="Award 5" />
+    </div>
+    <h4>CONTACT INFO</h4>
+    <p><i class="fas fa-map-marker-alt"></i> Raymond Boulevard 224, New York</p>
+    <p><i class="fas fa-envelope"></i> piquant@qodeinteractive.com</p>
+    <p><i class="fas fa-phone"></i> 1-444-123-4559</p>
+    <p><i class="fas fa-rss"></i> qodeinteractive.com</p>
+  </div>
+  <div class="award-right">
+    <div class="hours-box">
+      <h3>OPENING <span class="yellow">HOURS</span></h3>
+      <ul>
+        <li><span>Monday</span><span>9:00 – 22:00</span></li>
+        <li><span>Tuesday</span><span class="red">CLOSED</span></li>
+        <li><span>Wednesday</span><span>9:00 – 22:00</span></li>
+        <li><span>Thursday</span><span>9:00 – 22:00</span></li>
+        <li><span>Friday</span><span>9:00 – 1:00</span></li>
+        <li><span>Saturday</span><span>10:00 – 1:00</span></li>
+        <li><span>Sunday</span><span>10:00 – 22:00</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+ 
+<!-- ======= BOOK A TABLE ======= -->
+<section class="book" id="book">
+  <div class="book-row">
+    <div class="book-input">
+      <input type="number" value="1" min="1" />
+      <i class="fas fa-user"></i>
+    </div>
+    <span>for</span>
+    <div class="book-input">
+      <input type="date" value="2026-03-23" />
+      <i class="far fa-calendar-alt"></i>
+    </div>
+    <span>at</span>
+    <div class="book-input">
+      <input type="time" value="19:00" />
+      <i class="far fa-clock"></i>
+    </div>
+    <button class="btn-yellow" id="bookBtn"><i class="fas fa-thumbs-up"></i> BOOK A TABLE</button>
+  </div>
+  <p class="powered-by">POWERED BY OPENTABLE</p>
+</section>
+ 
+<!-- ======= FOOTER ======= -->
+<footer class="footer">
+  <div class="footer-row">
+ 
+    <div class="footer-col">
+      <a href="#" class="logo">Piquant</a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      <p><i class="fas fa-envelope"></i> piquant@qodeinteractive.com</p>
+      <p><i class="fas fa-phone"></i> 1-444-123-4559</p>
+      <p><i class="fas fa-map-marker-alt"></i> Raymond Boulevard 224, New York</p>
+    </div>
+ 
+    <div class="footer-col">
+      <h4>RECENT POSTS</h4>
+      <ul class="footer-list">
+        <li><a href="#">Chicken Tinga Nachos</a></li>
+        <li><a href="#">Sweet and Sour Pork Chops</a></li>
+        <li><a href="#">Green Chile And Chicken Stew</a></li>
+        <li><a href="#">Pecan Pie Macarons</a></li>
+      </ul>
+    </div>
+ 
+    <div class="footer-col">
+      <h4>INSTAGRAM</h4>
+      <div class="ig-grid">
+        <img src="assets/img/gallery-1.jpg" alt="ig1" />
+        <img src="assets/img/gallery-2.jpg" alt="ig2" />
+        <img src="assets/img/gallery-3.jpg" alt="ig3" />
+        <img src="assets/img/gallery-4.jpg" alt="ig4" />
+        <img src="assets/img/gallery-5.jpg" alt="ig5" />
+        <img src="assets/img/feat-1.jpg" alt="ig6" />
+      </div>
+    </div>
+ 
+    <div class="footer-col">
+      <h4>TWITTER FEED</h4>
+      <p>Couldn't connect with Twitter</p>
+    </div>
+ 
+  </div>
+ 
+  <div class="footer-bottom">
+    <p>© 2015 Qode Interactive, All Rights Reserved</p>
+    <div class="social-links">
+      <span>Follow Us</span>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tripadvisor"></i></a>
+    </div>
+  </div>
+</footer>
+ 
+<!-- Back to Top -->
+<a href="#" class="top-btn" id="topBtn">TOP</a>
+ 
+<!-- My JavaScript -->
+<script src="assets/js/script.js"></script>
+ 
 </body>
 
-</html>
+</html>  
