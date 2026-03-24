@@ -82,9 +82,6 @@ ul {
 .topbar-right a { color: #ccc; }
 .topbar-right a:hover { color: #f5c518; }
 
-/* ================================
-   NAVBAR
-   ================================ */
 .navbar {
   background: #1a1a1a;
   display: flex;
@@ -96,7 +93,6 @@ ul {
   z-index: 100;
 }
 
-/* Logo */
 .logo {
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
@@ -106,7 +102,6 @@ ul {
   margin-right: 30px;
 }
 
-/* Nav list */
 .nav-links {
   display: flex;
   align-items: center;
@@ -787,9 +782,6 @@ ul {
   line-height: 1.5;
 }
 
-/* ================================
-   TESTIMONIALS
-   ================================ */
 .testimonials {
   position: relative;
 }
