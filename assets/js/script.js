@@ -80,5 +80,6 @@ window.onload = function() {
       btn.style.background = '';
     }, 3000);
   };
+  chefCards.style.transform = 'translateX(-' + (pos * 33.33) + '%)';
 
 };
