@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Playfair Display';
-    src: url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Great Vibes';
-    src: url('../fonts/GreatVibes-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/GreatVibes-Regular.ttf') format('truetype');
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
