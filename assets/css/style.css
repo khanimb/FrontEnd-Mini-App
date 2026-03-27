@@ -9,7 +9,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Open Sans', sans-serif; color: #555; }
+body { font-family: 'Playfair Display', sans-serif; color: #555; }
 a { text-decoration: none; color: inherit; }
 img { width: 100%; display: block; }
 ul { list-style: none; }
